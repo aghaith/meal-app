@@ -1,0 +1,12 @@
+<h2>Random Meal Generator</h2>
+
+<button (click)="getRandomMeal()">Generate Random Meal</button>
+
+<div *ngIf="randomMeal">
+  <h3>{{ randomMeal.strMeal }}</h3>
+  <img [src]="randomMeal.strMealThumb" alt="Meal Image" />
+
+  <button (click)="toggleFavourite(randomMeal)">
+    {{ isFavourite(randomMeal) ? "Remove from Favorites" : "Add to Favorites" }}
+  </button>
+</div>

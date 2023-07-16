@@ -1,0 +1,9 @@
+<h2>My Favorites</h2>
+
+<ul>
+  <li *ngFor="let meal of favourites">
+    <img [src]="meal.strMealThumb" alt="Meal Image" />
+    <span>{{ meal.strMeal }}</span>
+    <button (click)="removeFavourite(meal)">Remove from Favourites</button>
+  </li>
+</ul>

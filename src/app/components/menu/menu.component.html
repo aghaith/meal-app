@@ -1,0 +1,7 @@
+<h2>Menu</h2>
+
+<div *ngFor="let category of categories">
+  <button (click)="navigateToCategory(category.strCategory)">
+    {{ category.strCategory }}
+  </button>
+</div>
